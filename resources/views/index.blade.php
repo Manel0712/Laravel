@@ -17,6 +17,11 @@
                         @csrf
                         <button type="submit">Disminuir Estoc</button>
                     </form>
+                    <form action="{{ route('productes.destroy', ['id' => $producte->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Eliminar Producto</button>
+                    </form>
                 </li>
             @endif
         @endforeach
