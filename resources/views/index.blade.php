@@ -9,7 +9,7 @@
         @foreach ($productes as $producte)
             @if ($producte->estoc > 0)
                 <li>{{ $producte->nom }} - Estoc: {{ $producte->estoc }}
-                    <form action="{{ route('producte.edit', ['id' => $producte->id]) }}" method="GET">
+                    <form action="{{ route('productes.edit', ['id' => $producte->id]) }}" method="GET">
                         @csrf
                         <button type="submit">Editar Producto</button>
                     </form>
